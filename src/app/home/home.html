@@ -1,0 +1,21 @@
+<div style="display: flex; justify-content: center">
+  <h2> Welcome to Marthoma Congregation Galway</h2>
+
+</div>
+
+<p-card header="Introduction">
+  <p class="m-0">
+    A warm welcome to all those who are visiting this page. This is the official website for the Marthoma Congregation in Co.Galway, Ireland. We started off as a small
+    community in 2008 that has grown from strength to strength to officially becoming a congregation in 2025. Below are some photos from our Holy communion service.
+  </p>
+</p-card>
+
+<div class="card" style="display: flex; margin-top: 5px; justify-content: center">
+  <p-galleria [value]="images" [autoPlay]="true" [circular]="true" [responsiveOptions]="responsiveOptions" [showItemNavigators]="true" [showThumbnails]="false" [numVisible]="5" [containerStyle]="{ 'max-width': '640px' }">
+    <ng-template #item let-item>
+      <img
+        [src]="item.itemImageSrc"
+        style="width: 750px; height: 90vh; display: block;" />
+    </ng-template>
+  </p-galleria>
+</div>

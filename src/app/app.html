@@ -1,0 +1,22 @@
+<div style=" display: grid;
+grid-auto-rows: min-content;
+width: 100%;
+height: auto;
+overflow: auto;">
+
+<p-toolbar>
+  <ng-template #start>
+    <p-image src="marthoma.png" alt="Image" width="60" />
+    <h4 style="padding-left: 10px">{{ title()}}</h4>
+  </ng-template>
+</p-toolbar>
+
+  <div style="display: flex; height: auto; width: auto">
+    <div style="height: auto!important;">
+<p-menu  [model]="menuItems" />
+    </div>
+    <div style="width: auto">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

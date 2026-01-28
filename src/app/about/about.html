@@ -1,0 +1,63 @@
+<div style="display: flex; justify-content: center">
+  <h2> Overview</h2>
+</div>
+
+<p-card header="Heritage">
+  <p class="m-0">
+    Malankara Mar Thoma Syrian Church (Malayalam: മലങ്കര മാര്‍ത്തോമ്മ സുറിയാനി സഭ, Malankara Mar Thoma Suriyani Sabha) otherwise called as Mar Thoma Church in a shorter form,which is a part of the One Holy Catholic and Apostolic Church. is one of the ancient Churches in the world. It is traditionally belived that St. Thomas (Mar Thoma in Syriac), the disciple of Jesus Christ came to India in AD 52 and established the Church in the Malabar coast. Kerala is known as Malankara in those times. Being rooted in the Bible, the Church maintains its Episcopal heritage and value oriented democratic form of administration.
+  </p>
+  <p>
+    The Church believes in Jesus Christ, the God incarnate for the redemption of humankind, and in the Triune God revealed by him, who himself is one among the Trinity. The Church cherishes its Oriental heritage and Episcopacy as a gift of God. The Church accepts Holy Bible as the basis for all matters of faith and doctrine, and the Nicene Creed formulated in accordance with the Holy Scripture. The Church is regarded as a ’bridge’ church in the Ecumenical world.
+  </p>
+  <p>
+    For more information visit the official <a style="color: var(--p-rose-500)" href="https://marthoma.in/">Marthoma Website</a>
+  </p>
+</p-card>
+
+<p-card header="Our Motto" [style]="{'margin-top': '5px'}">
+  <div style="display: flex; justify-content: center">
+  <p-image src="marthoma.png" alt="Image" width="140" />
+  </div>
+  <p class="m-0" style="font-style: italic; display: flex; justify-content: center">
+    "Lighted to Lighten"
+  </p>
+  <p>
+    The role of the church is to spread the good news of the gospel of Jesus Christ. Every believer and member of the Church, Wherever they are, are given the light so that they can lighten others.  </p>
+</p-card>
+
+<div style="display: flex; justify-content: center">
+  <h2> Our Clergy</h2>
+
+</div>
+  <div style="display: flex; width: 100%; margin:10px 10px 10px 10px; justify-content: center ">
+    @for (person of people; track person.name) {
+      <p-card [style]="{ width: '15rem', overflow: 'hidden', height:  '25rem', 'margin-right':'10px' }">
+        <ng-template #header>
+          <img alt="Card" style="width: 15rem; height: 15rem" [src]="person.img" />
+        </ng-template>
+        <ng-template #title> {{person.name}} </ng-template>
+        <ng-template #subtitle> {{person.title}} </ng-template>
+      </p-card>
+    }
+
+  </div>
+
+
+<p-card header="Contact Us">
+  <p class="m-0">
+    If you wish to learn more or become a member in our church, please contact the people below. We look forward to welcoming you&nbsp; <span class="pi pi-face-smile"></span>
+  </p>
+  <div style="display: flex">
+    @for (contact of contacts; track contact.name) {
+      <p-card  [style]="{'margin-right': '10px'}">
+        <ng-template #title> {{ contact.name }} </ng-template>
+        <ng-template #subtitle> {{ contact.title }} </ng-template>
+        <div style="display: flex"><i class="pi pi-phone"></i>
+          <span style="margin-left: 5px"><a style="color: var(--p-rose-500)" [href]="`tel:${contact.phone}`">{{ contact.phone }}</a></span>
+        </div>
+      </p-card>
+    }
+
+  </div>
+</p-card>
+
