@@ -39,6 +39,6 @@ export class App {
 
     }
   ];
-  
+
   protected readonly title = signal('Marthoma Congregation Galway');
 }
