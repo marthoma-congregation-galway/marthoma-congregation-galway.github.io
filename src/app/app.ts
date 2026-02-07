@@ -6,11 +6,12 @@ import {PanelMenuModule} from 'primeng/panelmenu';
 import {MenuItem, PrimeIcons} from 'primeng/api';
 import {MenuModule} from 'primeng/menu';
 import {trustedHTMLFromString} from '@angular/cdk/private';
+import {GalleriaModule} from 'primeng/galleria';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ToolbarModule,ImageModule, MenuModule ],
+  imports: [RouterOutlet, ToolbarModule, ImageModule, MenuModule, GalleriaModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -38,5 +39,6 @@ export class App {
 
     }
   ];
+  
   protected readonly title = signal('Marthoma Congregation Galway');
 }
