@@ -1,14 +1,28 @@
-import {Component, model, ModelSignal, OnInit} from '@angular/core';
+import {AfterViewInit, Component, inject, OnInit} from '@angular/core';
 import {CardModule} from 'primeng/card';
 import {GalleriaModule} from 'primeng/galleria';
+import {Toast} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
+import {Avatar} from 'primeng/avatar';
+import {Image} from 'primeng/image';
 
 @Component({
   selector: 'app-home',
-  imports: [CardModule, GalleriaModule],
+  imports: [CardModule, GalleriaModule, Toast, Avatar, Image],
+  providers: [MessageService],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {
+export class Home implements AfterViewInit{
+  private messageService = inject(MessageService);
+
+  ngAfterViewInit(): void {
+    this.messageService.add({
+      key: 'banner',
+      life: 7000,
+      severity: 'error',
+      summary: 'Check out our new VBS event coming up in May'
+    });  }
 
   images: any[] = [
     {
@@ -60,5 +74,9 @@ export class Home {
 }
 ];
 
+
+  onReject() {
+    this.messageService.clear('banner');
+  }
 
 }

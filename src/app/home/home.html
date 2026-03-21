@@ -19,3 +19,22 @@
     </ng-template>
   </p-galleria>
 </div>
+
+
+
+<p-toast position="top-right" key="banner" (onClose)="onReject()" [baseZIndex]="5000">
+  <ng-template let-message #message>
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: flex; justify-content: start">
+      <span style="margin-top: 2px; margin-right: 5px" class="pi pi-info-circle"></span>
+      <span style="font-weight: 550; margin-bottom: 5px">Don't Forget!</span>
+      </div>
+      <a href="/events">
+      <p-image src="vbs.jpeg" alt="logo" width="60" height="70">
+      </p-image>
+      </a>
+
+      <div >{{ message.summary }}</div>
+    </div>
+  </ng-template>
+</p-toast>

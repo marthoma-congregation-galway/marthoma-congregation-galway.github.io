@@ -20,7 +20,13 @@ export class Events {
     title: 'Holy Communion Service',
     location: `St. Michael's Community Hall, Craughwell, Galway`,
      time: this.formatDate(this.getSaturdayOfCurrentMonth(4)).concat(' 10:00AM')
-  }]
+  },
+     {
+       img: 'vbs.jpeg',
+       title: 'Vacation Bible School',
+       location: `St. Michael's Community Hall, Craughwell, Galway`,
+       time: '02/05/2026 & 03/05/2026'
+     }]
 
   getSaturdayOfCurrentMonth(numberSat: number): Date {
     const now = new Date();
