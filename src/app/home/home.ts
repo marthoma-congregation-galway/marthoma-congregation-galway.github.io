@@ -21,7 +21,7 @@ export class Home implements AfterViewInit{
       key: 'banner',
       life: 7000,
       severity: 'error',
-      summary: 'Check out our new VBS event coming up in May'
+      summary: 'Check out our new events coming up in April/May'
     });  }
 
   images: any[] = [
