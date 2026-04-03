@@ -26,7 +26,7 @@ export class About {
   },
     {
       img: 'reverend.jpeg',
-      title: 'Reverend of Galway & Dublin congregation',
+      title: 'Vicar of Galway & Limerick congregation',
       name: 'REV. Robin Raj'
     }]
 
