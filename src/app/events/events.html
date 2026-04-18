@@ -1,6 +1,6 @@
 <div style="display: flex; width: 100%; height: 100vh; margin:10px 10px 10px 10px ">
   @for (event of events; track event.title) {
-    <p-card [style]="{ width: '17rem', overflow: 'hidden', height:  '27rem', 'margin-right' : '5px' }">
+    <p-card [style]="{ width: '17rem', overflow: 'hidden', height:  '29rem', 'margin-right' : '5px' }">
       <ng-template #header>
         <img alt="Card" style="width: 17rem; height: 17rem" [src]="event.img" />
       </ng-template>
@@ -10,6 +10,10 @@
         <span class="pi pi-calendar-clock"></span>
         {{event.time}}
       </p>
+
+      @if (event.details) {
+        <a style="color: var(--p-rose-500)" href="https://forms.gle/XcB76gLQ9Zvz6AUD7">{{ event.details }}</a>
+      }
     </p-card>
   }
 

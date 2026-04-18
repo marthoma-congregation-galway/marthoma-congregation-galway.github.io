@@ -26,7 +26,8 @@ export class Events {
        img: 'vbs.jpeg',
        title: 'Vacation Bible School',
        location: `St. Michael's Community Hall, Craughwell, Galway`,
-       time: '02/05/2026 & 03/05/2026'
+       time: '02/05/2026 & 03/05/2026',
+       details: 'Link to register'
      }]
 
   getSaturdayOfCurrentMonth(numberSat: number): Date {
