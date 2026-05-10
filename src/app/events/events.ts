@@ -11,24 +11,16 @@ import {ButtonModule} from 'primeng/button';
 export class Events {
 
    events: any[] = [{
-     img: 'galLimPrayer.jpeg',
-     title: 'Galway & Limerick Prayer',
-     location: `St. Michael's Community Hall, Craughwell, Galway`,
-     //time: this.formatDate(this.getSaturdayOfCurrentMonth(2)).concat(' 4:00PM')
-     time: '11/04/2026 2:30pm'
+     img: 'pray.jpg',
+     title: 'Cottage Prayer',
+     location: `Undisclosed`,
+     time: this.formatDate(this.getSaturdayOfCurrentMonth(2)).concat(' 4:00PM')
    },{
      img: 'communion.jpg',
     title: 'Holy Communion Service',
     location: `St. Michael's Community Hall, Craughwell, Galway`,
      time: this.formatDate(this.getSaturdayOfCurrentMonth(4)).concat(' 10:00AM')
-  },
-     {
-       img: 'vbs.jpeg',
-       title: 'Vacation Bible School',
-       location: `St. Michael's Community Hall, Craughwell, Galway`,
-       time: '02/05/2026 & 03/05/2026',
-       details: 'Link to register'
-     }]
+  }]
 
   getSaturdayOfCurrentMonth(numberSat: number): Date {
     const now = new Date();

@@ -6,12 +6,19 @@
 <p-card header="Introduction">
   <p class="m-0">
     A warm welcome to all those who are visiting this page. This is the official website for the Marthoma Congregation in Co.Galway, Ireland. We started off as a small
-    community in 2008 that has grown from strength to strength to officially becoming a congregation in 2025. Below are some photos from our Holy communion service.
+    community in 2008 that has grown from strength to strength to officially becoming a congregation in 2025. Below are some photos and videos from our church.
   </p>
+
+  <video style="margin-left: 5px" width="400" controls>
+    <source src="vbs.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+
 </p-card>
 
+
 <div class="card" style="display: flex; margin-top: 5px; justify-content: center">
-  <p-galleria [value]="images" [autoPlay]="true" [circular]="true" [responsiveOptions]="responsiveOptions" [showItemNavigators]="true" [showThumbnails]="false" [numVisible]="5" [containerStyle]="{ 'max-width': '640px' }">
+  <p-galleria [value]="images" [autoPlay]="true" [circular]="true" [responsiveOptions]="responsiveOptions" [showItemNavigators]="true" [showThumbnails]="false" [numVisible]="5" [containerStyle]="{ 'max-width': '400px' }">
     <ng-template #item let-item>
       <img
         [src]="item.itemImageSrc"
@@ -21,21 +28,3 @@
 </div>
 
 
-
-<p-toast position="top-right" key="banner" (onClose)="onReject()" [baseZIndex]="5000">
-  <ng-template let-message #message>
-    <div style="display: flex; flex-direction: column;">
-      <div style="display: flex; justify-content: start">
-      <span style="margin-top: 2px; margin-right: 5px" class="pi pi-info-circle"></span>
-      <span style="font-weight: 550; margin-bottom: 5px">Don't Forget!</span>
-      </div>
-      <a href="/events">
-        <p-image src="vbs.jpeg" alt="logo" width="60" height="70">
-        </p-image>
-      </a>
-
-      <div style="font-size: 15px" >{{ message.summary }}</div>
-      <a style="color: var(--p-rose-500)" href="https://forms.gle/XcB76gLQ9Zvz6AUD7">Link to register</a>
-    </div>
-  </ng-template>
-</p-toast>
