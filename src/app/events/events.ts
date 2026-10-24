@@ -16,11 +16,18 @@ export class Events {
      location: `Undisclosed`,
      time: this.formatDate(this.getSaturdayOfCurrentMonth(2)).concat(' 4:00PM')
    },{
-     img: 'communion.jpg',
-    title: 'Holy Communion Service',
+     img: 'family_day.jpeg',
+    title: 'Family Day Holy Communion Service',
     location: `St. Michael's Community Hall, Craughwell, Galway`,
-     time: this.formatDate(this.getSaturdayOfCurrentMonth(4)).concat(' 10:00AM')
-  }]
+     time: this.formatDate(this.getSaturdayOfCurrentMonth(4)).concat(' 11:00AM')
+  },
+     {
+       img: 'world_sunday_school.jpeg',
+       title: 'World Sunday School Day',
+       location: `Riverstick Community Center, Boulaing, Riverstick, Co.Cork`,
+       time: '31/10/2026 8:30AM-3:30PM'
+     }
+     ]
 
   getSaturdayOfCurrentMonth(numberSat: number): Date {
     const now = new Date();
