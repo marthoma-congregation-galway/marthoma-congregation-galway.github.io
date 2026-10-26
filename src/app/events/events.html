@@ -1,18 +1,45 @@
 <div style="display: flex; width: 100%; margin:10px 10px 10px 10px ">
   @for (event of events; track event.title) {
-    <p-card [style]="{ width: '17rem', overflow: 'hidden', height:  '29rem', 'margin-right' : '5px' }">
+    <p-card [style]="{ width: '17rem', overflow: 'hidden', height: '29rem', 'margin-right': '5px' }">
       <ng-template #header>
-        <img alt="Card" style="width: 17rem; height: 17rem" [src]="event.img" />
+        <p-image
+          [src]="event.img"
+          alt="Card"
+          [preview]="true"
+          [imageStyle]="{'width': '17rem', 'height': '17rem', 'object-fit': 'cover'}">
+        </p-image>
       </ng-template>
+
       <ng-template #title> {{event.title}} </ng-template>
-      <ng-template #subtitle><span class="pi pi-building"></span> {{event.location}} </ng-template>
+
+      <ng-template #subtitle>
+        <span class="pi pi-building"></span> {{event.location}}
+      </ng-template>
+
       <p>
         <span class="pi pi-calendar-clock"></span>
         {{event.time}}
       </p>
     </p-card>
+
   }
 
 </div>
 
-<div style="margin-left: 10px">Any queries regarding events please contact the individuals from our <a href="/about">About page</a></div>
+<p-card header="Contact Us" [style]="{'margin-left': '10px'}">
+  <p class="m-0">
+    If you wish to learn more about any events or have any questions, please contact the people below.
+  </p>
+  <div style="display: flex">
+    @for (contact of contacts; track contact.name) {
+      <p-card  [style]="{'margin-right': '10px'}">
+        <ng-template #title> {{ contact.name }} </ng-template>
+        <ng-template #subtitle> {{ contact.title }} </ng-template>
+        <div style="display: flex"><i class="pi pi-phone"></i>
+          <span style="margin-left: 5px"><a style="color: var(--p-rose-500)" [href]="`tel:${contact.phone}`">{{ contact.phone }}</a></span>
+        </div>
+      </p-card>
+    }
+
+  </div>
+</p-card>

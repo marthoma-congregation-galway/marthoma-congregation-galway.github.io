@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
+import {ImageModule} from 'primeng/image';
 
 @Component({
   selector: 'app-events',
-  imports: [CardModule, ButtonModule],
+  imports: [CardModule, ButtonModule, ImageModule],
   templateUrl: './events.html',
   styleUrl: './events.css',
 })
 export class Events {
+
+  contacts : any[] = [
+    {name: 'Kochumman Jacob', title: 'Vice President', phone: '+353872592010'},
+    {name: 'Koshy George', title: 'Secretary', phone: '+353892790445'},
+    {name: 'George Thomas', title: 'Treasurer', phone: '+353879789378'}
+  ];
 
    events: any[] = [{
      img: 'pray.jpg',
